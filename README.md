@@ -26,19 +26,20 @@ Setup:
    '/sites/tutorsite/protected/models/UserGroupsUser.php' (line: 490) & 
    '/sites/tutorsite/protected/models/Ad.php' (line: 235)
        // $mail->send();
+
 6. Captcha(http://recaptcha.net) is used in the second step of ad posting. This would not work as expected in localhost.
    It wont cause any malfunction but it is ignored. If you want to remove completely, comment out
    '/sites/tutorsite/protected/models/Ad.php' comment out the below code:
       /*  array(
 			      'validacion', 
                               'application.extensions.recaptcha.EReCaptchaValidator', 
-                              //'privateKey'=>'6LcNWuISAAAAAE_36j1F3h4ecfwRt_zg7B9yrGL5',
-                              //'privateKey'=>'6Lfc_eASAAAAABfBfY11YZbtADJyuYja62AbVaOt',
-			       'privateKey' => '6LcB0ucSAAAAAPmMArXG1DV2CTnh9ERx3f9Ls7lZ',
+                              'privateKey'=>'6LcN****************************7B9yrGL5',
 			       'on' => 'general'
 		   ),*/
+
 7. With the current configuration, errors will be shown on webpage itself. If any syntax errors are there, they wont
    be shown on webpage, instead logged in '<webroot>/error_log'  & '/sites/tutorsite/protected/runtime/application.log' etc..
+
 8. (**Not Mandatory**)You maybe confused with 'modules' directory in two different places: '/sites/modules  & '/sites/tutorsite/protected/modules'.
    I had to do this because of having two different versions of the module 'dashboard' hosted on the same site. If you do
    not want this, you can move the modules to one place and make necessary changes to config file.
