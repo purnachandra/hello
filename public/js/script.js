@@ -1,0 +1,4 @@
+/* Author:
+
+*/
+jQuery.noConflict();
